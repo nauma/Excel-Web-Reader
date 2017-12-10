@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>excel Reader</title>
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+	<div ng-app="app" ng-controller="myCtrl">
+		<div id="load">
+			<div id="uploadFile">
+				<input type="file" file-model="xlsxFile" id="fileEvent"/>
+			</div>
+			<button ng-click="SelectFile()">1. Выбор файла</button>
+			<button ng-click="UploadTable()">2. Загрузить</button>
+		</div>
+
+		<div class="table_names" ng-if="file">
+			<div class="name {{ $index === active ? 'active' : '' }}" ng-repeat="page in file" ng-click="setPage($index);">{{page.name}}</div>
+		</div>
+
+		<div class="table" g-if="file">
+			<table border="1" ng-repeat="page in file" ng-show="$index === active">
+				<tr ng-repeat="line in page.data">
+					<td ng-repeat="column in line">{{column}}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/app.js"></script>
+</body>
+</html>

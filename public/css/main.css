@@ -1,0 +1,68 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+	font-family: verdana;
+	background: #f9f9f9;
+}
+
+#uploadFile {
+	display: none;
+}
+
+#load {
+	width: 100%;
+	background: green;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+	padding: 30px 0;
+}
+
+#load:hover,
+#load:active {
+	cursor: pointer;
+}
+
+.table_names {
+	width: 100%;
+	overflow: hidden;
+	background: #ccc;
+}
+
+.table_names > .name {
+	padding: 3px 6px;
+	font-weight: bold;
+	margin-right: 5px;
+	float: left;
+}
+
+.table_names > .name:hover,
+.table_names > .name:active {
+	cursor: pointer;
+}
+
+.table_names > .name.active {
+	border-bottom: 2px solid red;
+}
+
+table {
+	margin: 10px;
+}
+
+table td {
+	padding: 6px 10px;
+}
+
+button {
+	padding: 10px;
+	border: 1px solid #d9d9d9;
+	border-radius: 3px;
+	background: #d1d1d1;
+	font-weight: bold;
+	font-size: 26px;
+	margin-top: 10px;
+}
