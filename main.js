@@ -1,7 +1,9 @@
-var express = require('express');
-var fileUpload = require('express-fileupload');
-var xlsx = require('node-xlsx');
-var app = express();
+'use strict';
+
+const express = require('express');
+const fileUpload = require('express-fileupload');
+const xlsx = require('node-xlsx');
+const app = express();
 
 app.use(fileUpload());
 
